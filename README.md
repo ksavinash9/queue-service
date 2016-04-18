@@ -2,7 +2,7 @@
 
 Message Queues
 --------------
-Your task is to design and implement a message queue.
+Task is to design and implement a message queue.
 
 
 Background
@@ -24,12 +24,6 @@ The intended usage is that application components be written to use queues via
 a common interface, and injected with an instance suitable for the environment
 in which that component is running (development, testing, integration-testing,
 staging, production, etc).
-
-For further background reading on the idea of providing local implementations of
-production systems, please read:
-
-https://engineering.canva.com/2015/03/25/hermeticity/
-
 
 Behavior
 --------

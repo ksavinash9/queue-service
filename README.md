@@ -50,60 +50,6 @@ how they are intended to behave.  In particular, note the following properties:
    visible at the head of the queue again, ready to be delivered to another
    consumer.
 
-
-Scope
------
-You have 4 tasks to complete:
-
-1. write a QueueService interface to cater for just the essential actions:
-   - push     pushes a single message onto a specified queue
-   - pull     receives a single message from a specified queue
-   - delete   deletes a received message
-
-2. implement an in-memory version of QueueService; The in-memory version should
-   be thread-safe.
-
-3. (optional, time permitting) implement a file-based version of the interface,
-   which uses file system to co-ordinate between producers and consumers in
-   different JVMs (i.e. thread-safe in a single VM, but also inter-process safe
-   when used concurrently in multiple VMs); and
-
-4. (optional, time permitting) implement an sqs-based version of the interface.
-
-If you find yourself running low on time, we'd appreciate at least a description
-of how you would implement the outstanding tasks (in comment form, in the
-relevant source files).
-
-You should:
- - allow ~4 hours for this task;
- - don't be afraid of a simple solution if you can find one;
- - include unit tests (in particular, you should test the behavior of the
-   visibility timeout);
- - based on the intended usage of the implementations, you should use your
-   judgement to make trade-offs between competing factors, such as performance
-   vs simplicity;
- - include comments where relevant (pretend you are submitting this as a pull
-   request); and
- - not require any additional libraries (Guava, Junit, and Mockito have been
-   provided, but you may switch to use Apache Commons if you prefer).
-
-
-Building and Running
---------------------
-You should be able to import this project into any conventional IDE as a Maven
-project. As a fallback, you can use Maven to build and run tests from the
-command-line with:
-  mvn package
-
-
-Submission Checklist
---------------------
-Your submission should:
- - compile as submitted (please only JDK 7 or JDK 8)
- - have passing unit tests
- - be zipped/archived with a top level directory that identifies you by name
-
-
 # GOAL 
 
 Message queues are a ubiquitous mechanism for horizontal scalability.
